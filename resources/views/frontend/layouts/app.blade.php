@@ -34,6 +34,17 @@
     <script src="{{ mix('js/manifest.js') }}"></script>
     <script src="{{ mix('js/vendor.js') }}"></script>
     <script src="{{ mix('js/frontend.js') }}"></script>
+    <script>
+        (function (w){if (typeof w.Fernand !== "function") {var f = function () {f.q[arguments[0] == 'set' ? 'unshift' : 'push'](arguments);};f.q = [];w.Fernand = f;}})(window);
+        Fernand('set', {
+            appId: 'sharely',
+            orgDescription: 'Vi hjälper er!',
+            accentColor: '#31708E',
+            language: 'sv'
+        })
+        Fernand('init')
+    </script>
+    <script async src="https://messenger.getfernand.com/client.js"></script>
     <livewire:scripts />
     @stack('after-scripts')
 </body>
